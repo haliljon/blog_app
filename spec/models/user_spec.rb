@@ -26,12 +26,18 @@ RSpec.describe User, type: :model do
   end
 
   it '#last_3_post should return the last 3 posts' do
-    post1 = Post.new(title: 'My first post', text: 'Some text', author_id: subject.id, comments_counter: 0, likes_counter: 0)
-    post2 = Post.new(title: 'My second post', text: 'Some text', author_id: subject.id, comments_counter: 0, likes_counter: 0)
-    post3 = Post.new(title: 'My third post', text: 'Some text', author_id: subject.id, comments_counter: 0, likes_counter: 0)
-    post4 = Post.new(title: 'My fourth post', text: 'Some text', author_id: subject.id, comments_counter: 0, likes_counter: 0)
-    post5 = Post.new(title: 'My fifth post', text: 'Some text', author_id: subject.id, comments_counter: 0, likes_counter: 0)
-    post6 = Post.new(title: 'My sixth post', text: 'Some text', author_id: subject.id, comments_counter: 0, likes_counter: 0)
+    post1 = Post.new(title: 'My first post', text: 'Some text', author_id: subject.id, comments_counter: 0,
+                     likes_counter: 0)
+    post2 = Post.new(title: 'My second post', text: 'Some text', author_id: subject.id, comments_counter: 0,
+                     likes_counter: 0)
+    post3 = Post.new(title: 'My third post', text: 'Some text', author_id: subject.id, comments_counter: 0,
+                     likes_counter: 0)
+    post4 = Post.new(title: 'My fourth post', text: 'Some text', author_id: subject.id, comments_counter: 0,
+                     likes_counter: 0)
+    post5 = Post.new(title: 'My fifth post', text: 'Some text', author_id: subject.id, comments_counter: 0,
+                     likes_counter: 0)
+    post6 = Post.new(title: 'My sixth post', text: 'Some text', author_id: subject.id, comments_counter: 0,
+                     likes_counter: 0)
     post1.save
     post2.save
     post3.save
