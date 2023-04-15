@@ -10,11 +10,11 @@
     <p> <%= @user.bio%> </p>
 </div>
 <div>
-    <h1> Posts </h1>
+    <a href="<%= @user.id %>/posts/"><h1> Posts </h1></a>
     <div>
         <% @user.posts.last(3).each do |post| %>
             <div>
-                <a href="/posts/<%= post.id %>">
+                <a href="<%= @user.id %>/posts/<%= post.id %>">
                 <h3>Post #<%= post.id %> <%= post.title %></h3>
                 </a>
                 <p> <%= post.text %> </p>
