@@ -14,7 +14,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @new_post = current_user.posts.create(title: params[:post][:title], text: params[:post][:text], author_id: params[:user_id])
+    @new_post = current_user.posts.create(title: params[:post][:title], text: params[:post][:text],
+                                          author_id: params[:user_id])
     if @new_post.save
       redirect_to user_posts_path(current_user), notice: 'Post created successfully'
     else
