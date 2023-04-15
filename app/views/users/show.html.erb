@@ -12,7 +12,7 @@
 <div>
     <a href="<%= @user.id %>/posts/"><h1> Posts </h1></a>
     <div>
-        <% @user.posts.last(4).each do |post| %>
+        <% @user.last_3_post.each do |post| %>
             <div>
                 <a href="<%= @user.id %>/posts/<%= post.id %>">
                 <h3>Post #<%= post.id %> <%= post.title %></h3>
