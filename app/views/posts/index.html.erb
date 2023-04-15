@@ -4,7 +4,7 @@
         <h2><%= @user.name%></h2>
     </div>
     <div>
-        <% @user.posts.last(3).each do |post| %>
+        <% @user.posts.last(4).each do |post| %>
             <div>
                 <a href="<%= post.id%>">
                 <h3>Post #<%= post.id %> <%= post.title %></h3>
