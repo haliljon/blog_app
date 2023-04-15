@@ -2,9 +2,10 @@
     <div>
         <img src=<%= @user.photo%> alt="<%= @user.name%>'s photo">
         <h2><%= @user.name%></h2>
+        <%= link_to "New Post", new_user_post_path(@user) %>
     </div>
     <div>
-        <% @user.posts.last(4).each do |post| %>
+        <% @user.posts.each do |post| %>
             <div>
                 <a href="<%= post.id%>">
                 <h3>Post #<%= post.id %> <%= post.title %></h3>
