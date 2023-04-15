@@ -1,1 +1,26 @@
-<h1> Show users with particular ID </h1>
+<div>
+    <img src=<%= @user.photo%> alt="<%= @user.name%>'s photo">
+    <div>
+        <h1> <%= @user.name%> </h1>
+        <p> number of posts: <%= @user.posts_counter%></p>
+    </div>
+</div>
+<div>
+    <h2>Bio</h2>
+    <p> <%= @user.bio%> </p>
+</div>
+<div>
+    <a href="<%= @user.id %>/posts/"><h1> Posts </h1></a>
+    <div>
+        <% @user.last_3_post.each do |post| %>
+            <div>
+                <a href="<%= @user.id %>/posts/<%= post.id %>">
+                <h3>Post #<%= post.id %> <%= post.title %></h3>
+                </a>
+                <p> <%= post.text %> </p>
+                <p> Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%> </p>
+            </div>
+        <% end %>
+    </div>
+</div>
+<a href="<%=@user.id%>/posts/" class="button">See all posts</a>

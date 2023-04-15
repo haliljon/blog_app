@@ -1,1 +1,24 @@
-<h1>Posts</h1>
+<div>
+    <div>
+        <img src=<%= @user.photo%> alt="<%= @user.name%>'s photo">
+        <h2><%= @user.name%></h2>
+    </div>
+    <div>
+        <% @user.posts.last(4).each do |post| %>
+            <div>
+                <a href="<%= post.id%>">
+                <h3>Post #<%= post.id %> <%= post.title %></h3>
+                </a>
+                <p> <%= post.text.split[0..80].join(" ") %> </p>
+                <p> Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%> </p>
+            </div>
+            <div><% post.last_5_comments.each do |comment|%>
+                <p><%= comment.author.name%></p>
+                <p><%= comment.text%></p>
+                <br>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+    <button>Pagination</button>
+</div>
