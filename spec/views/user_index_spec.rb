@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'users/index', type: :feature do
+RSpec.describe 'user/index', type: :feature do
     before(:each) do
         @user_1 = User.create!(
                  name: 'Name1',

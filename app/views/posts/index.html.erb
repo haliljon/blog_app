@@ -7,7 +7,7 @@
     <div>
         <% @user.posts.each do |post| %>
             <div>
-                <a href="<%= post.id%>">
+                <a href="posts/<%= post.id%>">
                 <h3>Post #<%= post.id %> <%= post.title %></h3>
                 </a>
                 <p> <%= post.text.split[0..80].join(" ") %> </p>

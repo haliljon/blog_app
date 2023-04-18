@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'users/show', type: :feature do
+RSpec.describe 'user/show', type: :feature do
     before(:each) do
         @user_1 = User.create!(
                  name: 'Name1',
@@ -70,9 +70,9 @@ RSpec.describe 'users/show', type: :feature do
     it "When I click on a user post, it redirects me to that post's show page" do
         click_link 'See all posts'
         expect(page).to have_current_path user_posts_path(@user_1)
-      end
-      it "When I click to see all posts, it redirects me to the user's post's index page" do
+    end
+    it "When I click to see all posts, it redirects me to the user's post's index page" do
         click_link 'Title1'
         expect(page).to have_current_path user_post_path(@user_1, @post_1)
-      end
+    end
 end
