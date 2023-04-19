@@ -20,17 +20,17 @@ RSpec.describe 'Users', type: :request do
 
   describe 'GET #show' do
     it 'returns http success' do
-      get '/users/show'
+      get '/users/'
       expect(response).to have_http_status(:success)
     end
 
     it 'should render the show template' do
-      get '/users/show'
+      get '/users'
       expect(response).to render_template(:show)
     end
 
     it 'should test placeholder text' do
-      get '/users/show'
+      get '/users/1'
       expect(response.body).to include('Show users with particular ID')
     end
   end

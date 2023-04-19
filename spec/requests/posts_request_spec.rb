@@ -4,7 +4,7 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET #index' do
     it 'returns http success' do
       get '/users/1/posts'
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(200)
     end
 
     it 'should render the index template' do
